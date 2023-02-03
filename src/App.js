@@ -6,6 +6,10 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <br />
+        <a href="#" className="btn btn-primary">
+          Button
+        </a>
       </header>
       Dictionary Project
     </div>
