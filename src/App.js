@@ -12,9 +12,10 @@ export default function App() {
         <main>
           <Dictionary />
         </main>
-        Dictionary Project
+        <p>Dictionary Project</p>
+
         <footer className="App-footer">
-          <small>Coded by Praneetha</small>{" "}
+          <small>Coded by Praneetha</small>
         </footer>
       </div>
     </div>
