@@ -9,8 +9,7 @@ export default function Dictionary(props) {
   function handleResponse(response) {
     setResults(response.data[0]);
   }
-  function search(event) {
-    event.preventDefault();
+  function search() {
     let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyWord}`;
     axios.get(apiURL).then(handleResponse);
   }
