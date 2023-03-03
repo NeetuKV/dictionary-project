@@ -23,11 +23,7 @@ export default function Dictionary(props) {
       "Q4MMFsOMnY6ZxeFvxwdRmDeVaI4wcpO5zMYI4u3VDpgNlEUIitNsiI05";
     let pexelApiURL = `https://api.pexels.com/v1/search?query=${keyWord}&per_page=1`;
     let headers = { Authorization: `Bearer ${pexelApiKey}` };
-    axios
-      .get(pexelApiURL, {
-        headers: headers,
-      })
-      .then(handlePexelsResponse);
+    axios.get(pexelApiURL, { headers: headers }).then(handlePexelsResponse);
   }
   function handlesubmit(response) {
     setResults(response.data[0]);
