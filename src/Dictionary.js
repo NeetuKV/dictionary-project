@@ -13,7 +13,6 @@ export default function Dictionary(props) {
     setResults(response.data[0]);
   }
   function handlePexelsResponse(response) {
-    console.log(response.data);
     setPhotos(response.data.photos);
   }
   function search() {
@@ -21,7 +20,7 @@ export default function Dictionary(props) {
     axios.get(apiURL).then(handleDictionaryResponse);
     let pexelApiKey =
       "Q4MMFsOMnY6ZxeFvxwdRmDeVaI4wcpO5zMYI4u3VDpgNlEUIitNsiI05";
-    let pexelApiURL = `https://api.pexels.com/v1/search?query=${keyWord}&per_page=1`;
+    let pexelApiURL = `https://api.pexels.com/v1/search?query=${keyWord}&per_page=7`;
     let headers = { Authorization: `Bearer ${pexelApiKey}` };
     axios.get(pexelApiURL, { headers: headers }).then(handlePexelsResponse);
   }
