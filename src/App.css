@@ -1,8 +1,11 @@
 body {
-  background: #f9f8fe;
+  background: #e2e9c1;
 }
 a {
-  background: #9670f4;
+  background: #dfdde5;
+}
+h2 {
+  color: rgb(234, 84, 9);
 }
 .App {
   max-width: 900px;

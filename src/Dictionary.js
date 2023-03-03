@@ -15,17 +15,18 @@ export default function Dictionary(props) {
   function handlePexelsResponse(response) {
     setPhotos(response.data.photos);
   }
+
   function search() {
     let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyWord}`;
     axios.get(apiURL).then(handleDictionaryResponse);
     let pexelApiKey =
       "Q4MMFsOMnY6ZxeFvxwdRmDeVaI4wcpO5zMYI4u3VDpgNlEUIitNsiI05";
     let pexelApiURL = `https://api.pexels.com/v1/search?query=${keyWord}&per_page=7`;
-    let headers = { Authorization: `Bearer ${pexelApiKey}` };
+    let headers = { Authorization: `${pexelApiKey}` };
     axios.get(pexelApiURL, { headers: headers }).then(handlePexelsResponse);
   }
-  function handlesubmit(response) {
-    setResults(response.data[0]);
+  function handlesubmit(event) {
+    event.preventDefault();
     search();
   }
 

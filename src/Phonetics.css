@@ -9,8 +9,8 @@
   transition: all 150ms ease-in-out;
 }
 .Phonetics a:hover {
-  background: #947bd5;
-  color: white;
+  background: #420fc4;
+  color: rgb(26, 181, 31);
 }
 .Phonetics {
   margin: 20px 0;
